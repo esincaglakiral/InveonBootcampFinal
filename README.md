@@ -29,19 +29,19 @@ And Shop is an e-commerce project.
 
 | Homepage  |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/ba8ac2d3-1f9f-4387-bca7-2fa1bfcbf3c1" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/cc6cbcc0-b818-4ba9-89a8-7f1e3424a736) | 
 
 | Register  |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/add73ce7-14e1-4923-b20c-bfa096b0fb37" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/a69ada88-ef2d-45ea-9ad5-fe45f40af256) | 
 
 | Logged In User  | Logout  |
 | ------------- | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/3ca52baa-7860-4954-877e-edd80f84ec07" /> | <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/6442948a-178d-4e45-aede-0fb169d4d0c8" /> |
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/156d393f-3647-4ead-b41b-65cdf29775ec) | ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/c8a14e60-4bb2-470a-8d8e-0234c3fd7566) |
 
 | Login  |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/2a8ac65d-a112-46ed-a714-a927155040fb" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/4eebf83a-1634-4e5f-8adb-efe80885260b) | 
 
 </div>
 
@@ -51,7 +51,7 @@ And Shop is an e-commerce project.
   
 | Product Card | Product Detail |
 | ------------- | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/7f0aee9c-93fe-4ba6-b785-e3f1373a2b4b" /> | <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/04fef199-7f2e-4dfe-aef6-00b2461cfb8b" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/577e6d24-a02e-4c45-8a6c-11af8c9bfd48) | ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/e7cf0e56-478e-4231-92e1-33d1b0a28f00) | 
 
 </div>
 
@@ -61,19 +61,19 @@ And Shop is an e-commerce project.
 
 | Add Favorite  | Favorites  |
 | ------------- | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/510fed68-b2f3-42e7-829a-b2f39afc44b5" /> | <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/891044c4-18d2-45ea-9705-888974db1e3e" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/478df264-23db-460d-ac86-93c618e9241c) | ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/d0f2d968-02a6-4a7a-85bd-01ff12976112) | 
 
 | Favorites List  |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/1c69f898-d24a-4638-95f6-52130f7da13d" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/eefa34e1-5845-4c71-9360-09ba08313a9f) | 
 
 | Delete Prdouct From Favorites List |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/c06784b6-640e-40dd-a990-0e6248a039bf" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/63969330-ef94-43c4-9fc8-c32118da5a5a) | 
 
 | Delete Favorites List |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/721aa8a4-597e-4ad6-b2f4-9de28aa88a05" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/9165b571-74b2-4c81-8327-7dcac6a7d414) | 
 
 </div>
 
@@ -83,23 +83,24 @@ And Shop is an e-commerce project.
 
 | Add To Basket  | Basket  |
 | ------------- | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/e0bf3894-6e8e-4be4-8237-c3b9d83ff5fc" /> | <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/b2e1e4c3-4b0f-4e10-b849-a81117e416e8" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/9cc661dc-0962-411a-9912-ceb35c9e5637) | ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/91742bb0-92af-4140-adf3-23e2f22149b0) | 
 
 | Basket Item List |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/8443c9de-fe7a-4a79-bc3e-28aa8eaeaa0d" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/d7cd98e9-f8bc-4471-a78c-b4b35cf84820) | 
 
 | Update Basket Item Count  | Updated Basket  |
 | ------------- | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/c522da80-4f33-443f-b377-58b415f6ab67" /> | <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/bb032a98-314c-41fd-a566-d2ceb0b9d8a1" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/d2b590f8-02ca-434b-a946-ce1e773117bb) | ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/c6b4117a-03ab-450b-a5a4-2d9779f8b86c) | 
 
 | Add Coupon  |  Coupon and Discount |
 | ------------- | ------------- | 
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/5bdd5927-55df-4ecc-89c4-2c93602ef632" /> | <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/2972b508-b50f-453f-bc21-e0a403c5f24b" /> <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/95fd2780-bb26-4bd3-8eca-bc7b5c838427" />  | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/c0120772-489e-40c5-94f3-425faa0cfc4d) | ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/500069d3-5aa7-4d1d-b0f1-ec6b9d94ee8b)
+ ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/1dbc22d4-4b47-40c6-b782-a54a0cffee79)  | 
 
 | Delete Basket Items |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/653dc032-deb0-4ce1-aa36-85475ef36ec0" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/ac060d2a-a67e-49ef-b7b3-edbcb7716007) | 
 
 </div>
 
@@ -109,23 +110,19 @@ And Shop is an e-commerce project.
 
 | Checkout Screeen |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/98f92384-33e7-40d3-baaa-ed8c442e2372" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/d385c54a-aca8-4e4c-913a-3ce9379003ed) | 
 
 | Checkout Validation |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/24d4e1f3-018b-4308-9fb9-c896819b7ddc" /> | 
-
-| Pending Checkout |
-| ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/c11d711e-1b39-4fec-b6e8-92c9ddad0945" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/d872c9bb-9ff8-4144-8193-2e798a938aad) | 
 
 | Completed Order   | Order List  |
 | ------------- | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/28adbcdd-01ca-44ad-8bb2-3f3c7c48c9e2" /> | <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/7ed98edf-c509-4be2-9fd7-81ed28e732f8" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/d16cdeef-2852-4991-8ff8-8e9f45dd2506) | ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/0b540416-aacf-4d1c-b4c7-a60aab232570) | 
 
-|  Completed Order Email   | Iyzico Transaction List  |
-| ------------- | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/bcbb7f62-0aba-4229-9cd6-f10db1e0b3a5" /> | <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/faa5fac4-d9b3-46d3-b96a-69d186b4effd" /> | 
+| Iyzico Transaction List  |
+| ------------- |
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/71c5c622-9ddf-4705-a0c3-52951a8538c6) |
 
 </div>
 
@@ -135,19 +132,19 @@ And Shop is an e-commerce project.
 
 | Title Search |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/06386387-70cb-4cad-80dc-11b3a488aa87" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/1a52947f-9732-4bc1-80e3-0ed4d0180d54) | 
 
 | Category Filter |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/906909d1-21ce-4730-9460-763653461b3f" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/8008fa6d-94ba-4290-80da-febc2e4927d7) | 
 
 | Category and Label Filter |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/5a4cc9db-bca3-4765-96c1-e497c87ad2b6" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/cd12a0f3-e1f8-4310-9235-0a2b16536e14) | 
 
 | Price Range Filter |
 | ------------- |
-| <img src="https://github.com/OmerSah/Inveon_React_Final/assets/56412838/9e695f0f-5292-4a0d-a58f-76302ecd5a8f" /> | 
+| ![image](https://github.com/esincaglakiral/InveonBootcampFinal/assets/68962573/e6e25889-1f18-4736-b284-d7f0ad7eb9aa) | 
 
 </div>
 
