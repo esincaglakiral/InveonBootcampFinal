@@ -5,7 +5,28 @@
 Inveon FullStack Bootcamp - Final Project
 And Shop is an e-commerce project.
 
-- Tech Stack
+### Frontend:
+- Register, login and logout with identity server
+- Make payment with Iyzico
+- Filter and search procucts
+- Add or delele coupon from basket
+- List, create, update and delete basket items
+- List, create, update and delete favoite items
+- List past orders
+
+
+### Backend: 
+- Uses FluentEmail and Twilio SendGrid to send email to users
+- Stores entitites in MSSQL
+- Works with product, favorites, coupon, shopping card, order and identity server microservices
+- Simulates the checkout operations with Iyzico sandbox environment
+- Exists two user roles (Customer, Admin)
+- Authenticate and authorize users with Duende Identity Server
+- Provide chatting ability with SignalR to between users with 'Admin' role
+- Uses Ocelot API Gateway to communicate between microservices in the app architecture
+
+  
+### Tech Stack
 - - .NET 7
 - - React
 - - Ocelot
