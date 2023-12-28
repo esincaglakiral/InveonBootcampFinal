@@ -1,0 +1,4 @@
+Changes:
+
+Merge all DTOs and classes into one class library.
+

@@ -1,0 +1,415 @@
+Şöyle açıklayayım:
+
+src klasörü: Bu klasör, projenin kaynak kodlarını içerir. 
+Yani, uygulamanın geliştirildiği ana klasördür.
+
+App klasörü: Uygulamanın ana bileşeni burada bulunur. 
+Genellikle uygulamanın ana yapısını oluşturan ve diğer bileşenleri içeren bir dosyadır.
+
+assets klasörü: Bu klasör, projede kullanılan statik dosyaları (resimler, fontlar, vs.) içerir.
+
+components klasörü: Uygulamanın farklı parçalarını oluşturan bileşenleri içerir. 
+Bileşenler, genellikle tekrar kullanılabilir ve bağımsız öğelerdir.
+
+page klasörü: Uygulamanın farklı sayfalarını temsil eden bileşenleri içerir. 
+Her sayfa genellikle bir bileşen olarak ele alınır.
+
+services klasörü: Bu klasör, genellikle dış kaynaklara (API'lar gibi) bağlanan servisleri içerir. 
+Veri alışverişi ve işleme işlemleri burada yapılır.
+
+utils klasörü: Yardımcı fonksiyonlar, yardımcı sınıflar veya genel işlevleri içerir. 
+Proje genelinde kullanılan işlevler burada bulunabilir.
+
+app.css dosyası: Uygulamanın genel CSS stillerini içerir.
+
+app.js dosyası: Uygulamanın başlangıç noktasıdır. Genellikle uygulamanın temel yapılandırması ve 
+bileşenlerin render edilmesi burada gerçekleşir.
+
+app.test.js dosyası: Uygulamanın testlerini içerir. Testler, uygulamanın doğru çalışıp çalışmadığını 
+kontrol etmek için kullanılır.
+
+index.css ve index.js dosyaları: Bu dosyalar genellikle uygulamanın başlangıç noktasını temsil eder. 
+index.js dosyası genellikle uygulamanın DOM'a bağlandığı yerdir.
+
+
+ 
+
+ProductData: Bu bir dizi (array) ve uygulamanızdaki her bir ürünün bilgilerini içerir. Her bir ürün, bir nesne (object) olarak temsil edilir. Her ürün nesnesinde şu bilgiler bulunur:
+id: Ürünün benzersiz kimliğidir.
+labels: Ürünle ilişkilendirilmiş etiket veya etiketler.
+category: Ürünün kategori bilgisi.
+img: Ürünün ana resmi.
+hover_img: Fare üzerine gelindiğinde görünen resim.
+title: Ürünün başlığı veya adı.
+price: Ürünün fiyatı.
+description: Ürünle ilgili açıklama.
+rating: Ürüne ait derecelendirme bilgileri, ortalama puan ve değerlendirme sayısı.
+color: Ürünün mevcut renk seçenekleri. Her renk seçeneği, rengin adı, rengin resmi ve stok miktarını içerir.
+Bu veri yapısı, genellikle bir e-ticaret uygulamasındaki ürünleri temsil etmek için kullanılır.
+Bu veri, React bileşenleri aracılığıyla UI'da ürün kartları veya listeleri oluşturmak için kullanılabilir. 
+Kullanıcılar böylece uygulama üzerinden ürünleri görüntüleyebilir ve bu ürünlerle etkileşimde bulunabilir.
+
+
+
+bu cart.js dosyası, Redux Toolkit kullanılarak oluşturulmuş bir Redux dilimi (slice) içerir. İşte bu dosyanın içeriğinin ayrıntılı açıklamaları:
+
+İmportlar:
+
+Swal: Güzel bildirim (alert) mesajları oluşturmak için kullanılan bir kütüphanedir.
+createSlice ve createAsyncThunk from @reduxjs/toolkit: Redux Toolkit'ten gelen fonksiyonlarla dilim ve async işlemler oluşturmak için kullanılır.
+HttpService: HTTP istekleri yapmak için bir servis sınıfıdır.
+userManager: Kullanıcı yönetimini sağlayan bir yardımcı sınıftır.
+InitialState:
+
+products: Sepette bulunan ürünleri tutan bir dizi.
+status: Redux Toolkit'in async durumunu takip etmek için kullanılan bir durum.
+error: Hata durumunda tutulan bir hata nesnesi.
+cartSlice:
+
+createSlice fonksiyonu kullanılarak oluşturulan bir dilimdir.
+AddToCart, showInCart, updateCart, removeFromCart, clearCart gibi çeşitli reducers içerir. Bu, sepetle ilgili çeşitli eylemleri gerçekleştiren fonksiyonları temsil eder.
+extraReducers:
+
+createAsyncThunk ile oluşturulan getCart fonksiyonu, Redux Toolkit'in async işlevselliği için ekstra reducers içerir.
+pending, fulfilled, ve rejected durumlarını ele alır ve duruma göre durum, hata veya veriyi günceller.
+Reducer Fonksiyonları:
+
+AddToCart: Sepete ürün eklemek için kullanılır. Eğer ürün zaten sepette varsa miktarı arttırır, yoksa yeni bir ürün olarak ekler.
+showInCart: Sepette görünen ürünleri eklemek için kullanılır.
+updateCart: Sepet içindeki ürün miktarını günceller.
+removeFromCart: Sepetten belirli bir ürünü kaldırır.
+clearCart: Sepeti komple temizler.
+Async Eylemler:
+
+getCart: Sepet bilgilerini asenkron olarak getiren bir fonksiyondur.
+Exportlar:
+
+selectAllCartItems: Redux store'da bulunan tüm sepet ürünlerini seçer.
+selectTotalCartCost: Sepetin toplam maliyetini hesaplar.
+addToCart: Sepete ürün eklemek için kullanılan bir action creator.
+deleteFromCart: Sepetten ürün silmek için kullanılan bir action creator.
+Bu dosya, genellikle bir e-ticaret uygulamasında kullanılan sepetle ilgili işlemleri gerçekleştiren bir Redux dilimi olarak tasarlanmış gibi görünüyor. Sepetin güncellenmesi, eklenmesi, silinmesi ve alışveriş sepetiyle ilgili diğer işlemler burada yönetilir.
+
+
+
+
+favorites.js dosyası:
+İmportlar:
+
+ProductData: Önceki dosyada bulunan ürün verilerini içeren bir modül. Bu veriler, favorilere eklenecek ürünlerin başlangıç verilerini temsil eder.
+Swal: Kullanıcıya güzel bildirim mesajları göstermek için kullanılan bir kütüphane.
+createSlice, nanoid, ve createAsyncThunk from @reduxjs/toolkit: Redux Toolkit kullanılarak dilim ve async işlemler oluşturmak için kullanılan fonksiyonlar.
+HttpService: HTTP istekleri yapmak için kullanılan bir servis sınıfı.
+fetchProductById: Ürün bilgisini getiren bir fonksiyon.
+userManager: Kullanıcı yönetimini sağlayan bir yardımcı sınıf.
+InitialState:
+
+products: Favorilere eklenen ürünleri tutan bir dizi.
+status: Redux Toolkit'in async durumunu takip etmek için kullanılan bir durum.
+error: Hata durumunda tutulan bir hata nesnesi.
+favoritesSlice:
+
+createSlice fonksiyonu ile oluşturulan Redux dilimi.
+AddToFavorites, showInFavorites, removeFromFavorites, clearFavorites gibi reducers'lar içerir. Bu, favorilerle ilgili çeşitli eylemleri gerçekleştiren fonksiyonları temsil eder.
+extraReducers:
+
+createAsyncThunk ile oluşturulan getFavorites, addToFavorites, ve removeFromFavorites fonksiyonları, Redux Toolkit'in async işlevselliği için ekstra reducers içerir.
+pending, fulfilled, ve rejected durumlarını ele alır ve duruma göre durum, hata veya veriyi günceller.
+addToFavorites.fulfilled: Favorilere ürün eklendikten sonra yapılacak işlemleri tanımlar. Eklenen ürünü favoriler listesine ekler.
+removeFromFavorites.fulfilled: Favorilerden ürün silindikten sonra yapılacak işlemleri tanımlar. Silinen ürünü favoriler listesinden çıkarır.
+Reducer Fonksiyonları:
+
+AddToFavorites: Favorilere ürün eklemek için kullanılır. Eğer ürün zaten favorilerde varsa tekrar eklenmez.
+showInFavorites: Favorilerde görünen ürünleri eklemek için kullanılır.
+removeFromFavorites: Favorilerden belirli bir ürünü kaldırır.
+clearFavorites: Favorileri komple temizler.
+Async Eylemler:
+
+getFavorites: Favori bilgilerini asenkron olarak getiren bir fonksiyondur.
+addToFavorites: Favorilere ürün eklemek için kullanılan bir async action creator.
+removeFromFavorites: Favorilerden ürün silmek için kullanılan bir async action creator.
+Exportlar:
+
+selectAllFavorites: Redux store'da bulunan tüm favori ürünleri seçer.
+addToCart: Sepete ürün eklemek için kullanılan bir action creator.
+getFavorites, addToFavorites, ve removeFromFavorites: Async action creator'ları. Bu fonksiyonlar, ilgili HTTP isteklerini yaparak verileri günceler ve Redux store'unu günceller.
+Bu dosya, genellikle bir e-ticaret uygulamasında kullanılan favorilerle ilgili işlemleri gerçekleştiren bir Redux dilimi olarak tasarlanmış gibi görünüyor. Favori listesinin güncellenmesi, eklenmesi, silinmesi ve favori ürünlerle ilgili diğer işlemler burada yönetilir.
+
+
+
+
+Redux Toolkit'in createAsyncThunk fonksiyonu ile oluşturulan async işlemlerin durumunu ve sonuçlarını ele almak için kullanılan üç temel durumu ifade eder. Bu durumlar:
+
+pending: İşlem başladığında tetiklenir. Yani, asenkron işlem başlatıldığında, bu durum devreye girer. Bu durum genellikle bir yükleme göstergesi veya kullanıcıya işlemin devam ettiğini bildiren bir bildirim göstermek için kullanılır.
+
+fulfilled: İşlem başarıyla tamamlandığında tetiklenir. Yani, asenkron işlem başarılı bir şekilde tamamlandığında bu durum devreye girer. Bu durum, genellikle alınan veriyi güncellemek veya işlem tamamlandığında kullanıcıya bir geribildirim göstermek için kullanılır.
+
+rejected: İşlem hata ile sonuçlandığında tetiklenir. Yani, asenkron işlem bir hata ile sonuçlandığında bu durum devreye girer. Bu durum, genellikle hata durumunu ele almak ve kullanıcıya bir hata mesajı göstermek için kullanılır.
+
+Bu üç durum, asenkron işlemleri takip etmek, kullanıcı arayüzünde durumu göstermek ve uygun şekilde tepki vermek için kullanılır. Redux Toolkit, bu durumları otomatik olarak yönetir ve gerekli güncellemeleri Redux store'una uygular, bu da uygulama durumunu kolayca yönetmeyi sağlar.
+
+
+
+
+
+
+slice klasöründeki tüm dosyaları inceleyerek, uygulamanın Redux tarafındaki durum yönetimini nasıl ele aldığını öğrendik. Şimdi bir özet yapalım:
+
+cart.js:
+
+Sepetle ilgili durumları yönetir.
+Sepete ürün eklemek, sepeti güncellemek, ürünü sepetten kaldırmak gibi işlemleri gerçekleştirir.
+Redux Toolkit ile oluşturulmuş bir slice.
+favorites.js:
+
+Favorilerle ilgili durumları yönetir.
+Favorilere ürün eklemek, favorileri güncellemek, ürünü favorilerden kaldırmak gibi işlemleri gerçekleştirir.
+Redux Toolkit ile oluşturulmuş bir slice.
+product.js:
+
+Ürünlerle ilgili durumları yönetir.
+Tüm ürünleri getirme, belirli bir ürünü getirme gibi işlemleri gerçekleştirir.
+Redux Toolkit ile oluşturulmuş bir slice.
+reviews.js:
+
+İncelemelerle ilgili durumları yönetir.
+İncelemeleri getirme, yeni inceleme ekleme gibi işlemleri gerçekleştirir.
+Redux Toolkit ile oluşturulmuş bir slice.
+settings.js:
+
+Kullanıcının tercihlerini (çerezleri, promosyonları) yönetir.
+Çerezleri durdurma, promosyonları etkinleştirme gibi işlemleri gerçekleştirir.
+Redux Toolkit ile oluşturulmuş bir slice.
+user.js:
+
+Kullanıcı ile ilgili durumları yönetir.
+Giriş yapma, çıkış yapma, kayıt olma gibi işlemleri gerçekleştirir.
+Redux Toolkit ile oluşturulmuş bir slice.
+Her bir dosya, belirli bir bölümün (slice) durumunu ve o bölümde gerçekleşen eylemleri yönetir. Bu, uygulama durumunu küçük, yönetilebilir parçalara (slicelar) bölmeye ve her birini ayrı bir Redux slice'ında ele almaya dayanır. "Slice", uygulamanın genel durumunu temsil eden bir parçadır ve bu modüler yapı, uygulamanın durum yönetimini daha etkili ve sürdürülebilir kılar.
+
+
+
+
+
+
+store.js dosyası, Redux store'unu yapılandırmak ve oluşturmak için kullanılır. Redux store, uygulamanın durumunu ve bu durumu değiştiren eylemleri yöneten bir nesnedir. Bu dosya, uygulamanın Redux store'unu oluşturan ve farklı reducer'ları (slice'ları) bir araya getiren yerdir.
+
+İşte bu dosyanın yaptığı başlıca işlemler:
+
+Reducer'ları Birleştirme:
+
+productsReducer, favoritesReducer, cartReducer, userReducer, reviewsReducer ve settingsReducer gibi farklı sliceları içeren reducer'ları bir araya getirir.
+configureStore fonksiyonuna verilen reducer alanında, her bir slicenın hangi durumu yöneteceğini belirtir.
+Store Oluşturma:
+
+configureStore fonksiyonunu kullanarak bir Redux store oluşturur.
+Bu store, uygulamanın durumunu depolayan, eylemleri dinleyen ve durumu güncelleyen bir yapıdır.
+Kullanıcı Yükleniyor:
+
+redux-oidc kütüphanesini kullanarak, kullanıcıyı yüklemek için loadUser fonksiyonunu çağırır.
+Bu adım genellikle sayfa yenilendiğinde veya uygulama ilk yüklendiğinde kullanıcının oturum açıkken durumunu korumak için yapılır.
+Sonuç olarak, store.js dosyası, uygulamanın Redux store'unu yapılandırmak ve farklı bileşenlerin durumlarını bir araya getirmek için kullanılan önemli bir dosyadır. Redux store, uygulamanın genel durumunu yönetir ve bu durumu değiştirmek için kullanılan eylemleri dinler.
+
+
+
+Bu CartViewThree.js dosyası, alışveriş sepeti görünümünü oluşturan bir React bileşenidir. Şu işlevleri yerine getiriyor:
+
+Ürün Listesi Görüntüleme:
+
+Alışveriş sepetindeki ürünleri listeleyerek gösterir.
+Her ürün için resim, ürün adı, fiyatı, miktarı ve toplam fiyat alanlarını içerir.
+Her ürünün yanında "Remove" bağlantısı bulunur, bu sayede ürünü sepetten çıkarabilirsiniz.
+Sepet Güncelleme:
+
+Alışveriş sepetindeki ürün miktarlarını güncellemek için bir "Update Cart" butonu bulunur.
+Toplam Tutar ve Kargo Bilgileri:
+
+Sağ üst köşede toplam ücret ve kargo bilgilerini gösterir.
+Kargo seçeneklerini ve ücretlerini seçmek için bir form sunar.
+Kupon Ekleme:
+
+Bir kupon kodu eklemek için bir alan ve "Apply Coupon" butonu bulunur.
+Ödeme ve Kasa:
+
+Alışverişi tamamlamak ve ödeme yapmak için "Checkout" butonu vardır. Bu buton, kullanıcıyı ödeme sayfasına yönlendirir.
+Genel olarak, bu bileşen alışveriş sepetini gösterir ve günceller, toplam tutarı hesaplar ve ödeme işlemine geçiş yapar. Sayfa tasarımında kullanılan stiller ve öğeler ile birlikte, kullanıcıya alışveriş sepeti yönetimi için bir arayüz sağlar.
+
+
+
+
+Bu CartViewTwo.js dosyası, alışveriş sepetini gösteren bir React bileşenidir ve aşağıdaki görevleri yerine getirir:
+
+Ürün Listesi Görüntüleme:
+
+Alışveriş sepetindeki ürünleri listeleyerek gösterir.
+Her bir ürün için resim, ürün adı, fiyat, miktar ve toplam fiyat alanları bulunur.
+Her ürünün yanında "Remove" bağlantısı yer alır, bu sayede ürünü sepetten çıkarabilirsiniz.
+Ayrıca her ürünün miktarını artırıp azaltmak için artırma ve azaltma düğmeleri bulunur.
+Sepet Güncelleme İşlemleri:
+
+Her bir ürünün miktarını güncellemek ve sepetten ürünü kaldırmak için ilgili işlevlere sahiptir.
+"Clear Cart" butonu, tüm sepeti temizler ve içindeki tüm ürünleri kaldırır.
+Kupon Ekleme İşlemi:
+
+Kupon kodu eklemek için bir alan ve "Apply coupon" butonu bulunur.
+Kupon kodu geçerli değilse, hata mesajı göstermek için Swal kullanılmıştır.
+Toplam Tutar ve Kargo Bilgileri:
+
+TotalCart bileşenini içerir, bu bileşen toplam tutarı ve kargo bilgilerini gösterir.
+Boş Sepet Durumu:
+
+Eğer sepette ürün yoksa, kullanıcıya boş sepet durumunu gösteren bir bildirim gösterir.
+"Continue Shopping" bağlantısıyla kullanıcıyı alışverişe devam etmeye yönlendirir.
+Bu bileşen, alışveriş sepeti yönetimi için kullanıcı arayüzü oluşturur ve Redux üzerindeki verileri kullanarak sepetin durumunu günceller.
+
+
+
+
+index.js, kullanıcının alışveriş sepetini gösteren bir bileşeni içerir. İşlevselliği ve görünümü aşağıdaki görevleri gerçekleştirir:
+
+Sepet Doluysa:
+
+Eğer sepet doluysa, sepet içeriğini tablo şeklinde gösterir.
+Her ürün için resim, ürün adı, fiyat, miktar (değiştirilebilir), toplam fiyat ve kaldır butonu içeren bir tablo oluşturur.
+Her ürünün kaldır butonu, kullanıcının o ürünü sepetten kaldırmasını sağlar.
+Sepeti temizle butonu, tüm ürünleri sepetten kaldırır.
+Coupon ve TotalCart bileşenlerini içerir.
+Sepet Boşsa:
+
+Eğer sepet boşsa, bir boş sepet mesajı ve "Alışverişe Devam" bağlantısı içeren bir mesaj gösterir.
+Boş sepet mesajının altında bir boş sepet görseli bulunmaktadır.
+Redux Kullanımı:
+
+Redux'un useDispatch ve useSelector kancalarını kullanarak sepetle ilgili eylemleri gerçekleştirir.
+Redux store'dan sepet bilgilerini almak için useSelector kullanılır.
+Sepetten ürün kaldırmak, sepeti temizlemek ve sepet değerlerini güncellemek için Redux eylemlerini tetikleyen fonksiyonlar bulunur.
+Bu dosya, kullanıcının alışveriş sepetini yöneten bir bileşeni temsil eder. 
+
+
+
+
+
+TotalCart.js componenti, alışveriş sepetindeki ürünlerin toplam maliyetini ve diğer ilgili bilgileri gösteren bir bileşendir. İşte bu componentte yapılan işlemler:
+
+Redux Store'dan Veri Alma:
+useSelector hook'u kullanılarak Redux store'dan alışveriş sepetindeki ürünlerin bilgilerini alır.
+
+jsx
+Copy code
+let carts = useSelector((state) => state.cart.products);
+Toplam Maliyet Hesaplama:
+cartTotal fonksiyonu, alışveriş sepetindeki ürünlerin miktarı ve fiyatına göre toplam maliyeti hesaplar. Sepetin her öğesi için (ürün miktarı * ürün fiyatı) işlemi yapılır ve sonuçlar toplanır.
+
+jsx
+Copy code
+const cartTotal = () => {
+    return carts.reduce(function (total, item) {
+        return total + ((item.quantity || 1) * item.price)
+    }, 0);
+}
+Toplam Bilgileri Gösterme:
+Component, alt toplam, kargo ücreti, toplam gibi bilgileri görüntüler. Ayrıca kullanıcıya "Kargo Hesapla" seçeneği sunar. Eğer props.fullGrid true ise (tam genişlikte kullanım), tüm bu bilgileri bir araya getirip kullanıcıya gösterir.
+
+jsx
+Copy code
+{props.fullGrid ? (
+    // Tam genişlik kullanım
+    // ...
+) : (
+    // Diğer durum
+    // ...
+)}
+Ödeme Sayfasına Yönlendirme:
+Kullanıcı "Alışverişi Tamamla" butonuna tıkladığında, belirli bir ödeme sayfasına yönlendirme işlemi gerçekleşir. Yönlendirme, Link componenti kullanılarak sağlanır.
+
+jsx
+Copy code
+<Link to="/checkout-one" className="theme-btn-one btn-black-overlay btn_sm">
+    Alışverişi Tamamla
+</Link>
+Bu component, alışveriş sepetindeki toplam maliyeti göstererek kullanıcıya ödeme işlemlerini tamamlama veya devam etme seçenekleri sunar.
+
+
+
+
+CheckOutTwo (veya CheckoutTwo.js) adlı bu bileşen, ödeme işlemi için bir sayfa oluşturan bir React bileşenidir. İşlevselliği şu şekilde özetlenebilir:
+
+State ve Ref'lerin Tanımlanması:
+
+orderTotal: Redux store'dan alışveriş sepetinin toplam maliyetini depolar.
+purchaseButton ve informationForm: ref kullanılarak belirli DOM elementlerine erişimi sağlar.
+paymentSuccess: Ödeme başarılı olduğunda veya başarısız olduğunda durumu depolar.
+createPayment Fonksiyonu:
+
+Kullanıcının girdiği bilgileri kullanarak ödeme oluşturan bir fonksiyon.
+Formdaki her bir öğeyi döngü ile alır ve bir nesneye ekler.
+HttpService.createPayment kullanılarak ödeme oluşturulur.
+Başarılıysa Redux store'daki alışveriş sepeti temizlenir (cart/clearCart) ve kullanıcı "order-complete" sayfasına yönlendirilir.
+Render Fonksiyonu:
+
+Fatura adresi giriş formunu içerir. Kart numarası, CVV, son kullanma ayı, son kullanma yılı, ad, soyad, şirket adı, ülke, cadde, numara, şehir, telefon, e-posta ve sipariş notu gibi bilgileri içerir.
+TopLogin ve YourOrder bileşenlerini içerir.
+YourOrder bileşenine paymentFunction adlı prop'u aracılığıyla ödeme fonksiyonunu iletir.
+Kullanıcının girdiği bilgilerle birlikte ödeme oluşturulmasını sağlar.
+TopLogin ve YourOrder Bileşenleri:
+
+Bu bileşen, sayfanın üst kısmında kullanıcı girişi ve sipariş özeti için bilgileri içerir.
+Bu bileşen, ödeme işleminin gerçekleştirildiği, kullanıcının fatura adresi bilgilerini girdiği ve sipariş özetini gördüğü bir ödeme sayfasıdır. YourOrder bileşeni, kullanıcının seçtiği ürünleri ve toplam maliyeti gösterirken, TopLogin bileşeni kullanıcının giriş yapmış olup olmadığını göste
+
+
+
+
+TopLogin (veya TopLogin.js) adlı bu bileşen, ödeme sayfasında kullanıcı girişi ve kupon kodu girişi işlemlerini gerçekleştiren bir React bileşenidir. İşlevselliği şu şekilde özetlenebilir:
+
+State ve Redux Selectors:
+
+useDispatch ve useSelector hook'ları kullanılarak Redux store'dan dispatch fonksiyonu ve kullanıcı durumu (status) ile kullanıcı bilgileri (user) alınır.
+Login Fonksiyonu:
+
+Kullanıcının giriş yapmasını sağlayan bir fonksiyon.
+Kullanıcı daha önce giriş yapmışsa (status true ise), bir SweetAlert modal penceresi gösterilir. Aksi takdirde, kullanıcının giriş yapması için Redux store'daki kullanıcı durumu güncellenir (dispatch({ type: "user/login"}) ve bir başka SweetAlert modal penceresi ile giriş başarılı mesajı gösterilir.
+Render Fonksiyonu:
+
+Kullanıcı girişi ve kupon kodu girişi için iki ayrı bölüm içerir.
+Kullanıcı girişi bölümü, giriş yapmak için bir form içerir. Kullanıcı adı veya e-posta adresi ile şifre girilir.
+Kupon kodu girişi bölümü, bir form içerir. Kupon kodu girilir ve onaylama butonu bulunur.
+SweetAlert Kullanımı:
+
+Kullanıcı girişinde SweetAlert kütüphanesi kullanılarak bilgi mesajları gösterilir. Giriş başarılı olduğunda "Hoşgeldin [kullanıcı adı]" şeklinde bir mesaj görüntülenir.
+Kupon kodu girişinde ise geçersiz kupon kodu uyarısı verilir.
+Bu bileşen, ödeme sayfasında kullanıcı girişi ve kupon kodu girişi işlemlerini yöneten bir arayüz sunar.
+
+
+
+
+YourOrder.js dosyasındaki bu bileşen, ödeme sayfasında kullanıcının sepetindeki ürünleri ve sipariş toplamını gösteren bir tablo oluşturur. İşlevselliği şu şekilde özetlenebilir:
+
+Redux Selectors:
+
+useSelector hook'u kullanılarak Redux store'dan alışveriş sepetindeki ürünler (cartProducts) ve toplam sipariş tutarı (cartTotal) alınır.
+Rastgele Ürün Resmi Fonksiyonu:
+
+getRandomImageUrl fonksiyonu, tablodaki her ürün için rastgele bir ürün resmi almak için kullanılır.
+Tablo Oluşturma:
+
+cartProducts dizisindeki her ürün için bir tablo satırı oluşturulur.
+Tablo satırı, ürün adedi, ürün adı, ürün resmi, birim fiyat ve toplam fiyat bilgilerini içerir.
+Toplam Tutar Hesaplama:
+
+Alışveriş sepetindeki ürünlerin toplam fiyatı, kargo ücreti ile birlikte hesaplanır.
+Toplam tutar, alt toplam, kargo ücreti ve sipariş toplamı şeklinde ayrı ayrı gösterilir.
+Ödeme Yöntemi Seçimi:
+
+Kullanıcının ödeme yöntemini seçmesine olanak tanıyan bir form oluşturulur.
+Şu anda sadece "Banka/Kredi kartı" ödeme yöntemi seçeneği bulunmaktadır.
+Sipariş Ver Butonu:
+
+Ödeme yöntemi seçildikten sonra kullanıcıya "Sipariş Ver" butonu görüntülenir.
+Buton tıklandığında, props.paymentFunction() fonksiyonu çalıştırılır. Bu fonksiyon genellikle ödeme işlemini tamamlar ve kullanıcıyı sipariş tamamlama sayfasına yönlendirir.
+Bu bileşen, kullanıcının sepetindeki ürünleri ve toplam sipariş tutarını gösteren bir ödeme sayfası alt bileşenidir.
+
+
+
+
+
+

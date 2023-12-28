@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "Inveon.Services.Inform": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
