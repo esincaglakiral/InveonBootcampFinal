@@ -1,14 +1,5 @@
 # Getting Started with Create React App
 
-A dynamic search algorithm has been implemented in React.js, utilizing the filter function without the need for an API call.
-Screenshot:
-![image](https://github.com/esincaglakiral/InveonBootcampHomework/assets/68962573/33511297-fb1b-4346-a81b-eb62d2cce3d8)
-![image](https://github.com/esincaglakiral/InveonBootcampHomework/assets/68962573/ac882745-4f40-48fb-8d81-d8f9f265470d)
-![image](https://github.com/esincaglakiral/InveonBootcampHomework/assets/68962573/ea8fffc2-dc7c-4b8a-8d3e-ef28c1f001fe)
-![image](https://github.com/esincaglakiral/InveonBootcampHomework/assets/68962573/2190c47b-c770-4270-9a6f-1d09807f12e6)
-![image](https://github.com/esincaglakiral/InveonBootcampHomework/assets/68962573/6488a47e-9bcc-4664-977a-58a7eb451e95)
-![image](https://github.com/esincaglakiral/InveonBootcampHomework/assets/68962573/2a656a04-3ee9-459d-b0f3-afd125e70a02)
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
